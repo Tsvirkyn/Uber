@@ -1,6 +1,15 @@
+// Group selector//
 %color-text
   color: #fff
-
+$basic_color: #202020
+$basic_font:  17px
+$basic_style: normal
+$basic_font_p: 15px
+$basic_color_span:#1EACC7
+$basic_line-height:21px
+$basic_family:Roboto
+$basic_weight_span:400
+$basic_weight_p:300
 =btn
   font:
     style: normal
@@ -12,11 +21,43 @@
   text-decoration: none
   flex-shrink: 0
   text-transform: uppercase
+%span
+  line-height: $basic_line-height
+  font-style: $basic_style
+  font-family: $basic_family
+  font-weight: $basic_weight_span
+%main_p
+  line-height: $basic_line-height
+  font-style: $basic_style
+  font-family: $basic_family
+  font-weight: $basic_weight_p
+%mobil
+  color: #222
+  text-align: center
+  font-size: 37px
+  font-style: normal
+  font-weight: 700
+  line-height: 48px /* 126.316% */
+  text-transform: uppercase
+
+%main_span
+  color: #FFF
+  text-align: center
+  font-size: 11px
+  font-style: normal
+  font-weight: 400
+  line-height: 11px /* 100% */
+  text-transform: uppercase
+
+%main_article
+  margin-top: 26px
+  margin-bottom: 33px
+  width: 113px
+  height: 23px
+  background: #202020
 
 
-
-
-
+// Header//
 header
   background: url("../img/uber_bg.png")
     position: 50% 50%
@@ -26,13 +67,18 @@ header
 .header-nav
   padding: 20px 0
   background: #212121
-
-  .nav-link
+  .navbar
+    justify-content: end
+  .bg-light
+    background: #212121!important
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover
+    color: snow
+  .navbar-light .navbar-nav .nav-link
     font:
-      family: Roboto
-      size: 15px
-      style: normal
-      weight: 300
+     family: Roboto
+     size: 15px
+     style: normal
+     weight: 300
     line-height: 15px
     @extend %color-text
 
@@ -71,15 +117,15 @@ header
   .block__elem3__a
     +btn
     @extend %color-text
-    width: 172px
     height: 46px
     font:
       size: 14px
     line-height: 46px
 /* 328.571% */
-
 .header-logo
-  .header-logo__h1
+  &__h1
+    margin-top: 53px
+    margin-bottom: 25px
     font:
       family: Roboto
       size: 60px
@@ -89,7 +135,9 @@ header
     text-transform: uppercase
     @extend %color-text
 
-  .header-logo__h2
+
+  &__h2
+    margin-bottom: 28px
     font:
       family: Roboto
       size: 36px
@@ -99,7 +147,8 @@ header
     text-transform: uppercase
     @extend %color-text
 
-  .header-logo__p_text
+  &__p_text
+    margin-bottom: 36px
     font:
       family: Roboto
       size: 18px
@@ -108,7 +157,8 @@ header
     line-height: 24px
     @extend %color-text
 
-  .header-logo__info
+  &__info
+    margin-bottom: 100px
     font:
       family: Roboto
       size: 18px
@@ -117,7 +167,7 @@ header
     line-height: 24px
     @extend %color-text
 
-  .header-logo__a
+  &__a
     +btn
     @extend %color-text
     width: 259px
@@ -125,3 +175,104 @@ header
     font:
       size: 18px
     line-height: 63px
+
+// Main//
+main
+ .main_span
+   @extend %main_span
+ .main_h2
+    margin-bottom: 27px
+    @extend %mobil
+ .main_block
+   .main_block_article1
+     @extend %main_article
+   .picture
+     height: 116px
+     width: 116px
+     margin-right: 24px
+   &__span
+     color: $basic_color_span
+     font-size: $basic_font
+     @extend %span
+   &__p
+     color: #202020
+     font-size: $basic_font_p
+     @extend %main_p
+.main_block_elem1
+  .main_block_article2
+    margin-top: 16px
+    margin-bottom: 33px
+    width: 113px
+    height: 23px
+    background: #202020
+
+
+
+
+
+
+@media only screen and (max-width: 1200px)
+  .header-logo
+    &__h1
+      margin-bottom: 24px
+      font:
+        size: 44px
+    &__h2
+      margin-bottom: 17px
+      font:
+        size: 28px
+    &__p_text
+      margin-top: 12px
+      margin-bottom: 25px
+      font:
+        size: 25px
+    &__info
+      margin-bottom: 25px
+      font:
+        size: 25px
+@media only screen and (max-width: 992px)
+  .header-info
+    &__section
+      display: flex
+      justify-content: flex-end
+    &__block__section
+      display: none!important
+    &__elem2__number
+      font:
+        size: 19px
+    &__elem2__span
+      font:
+        size: 11px
+    &__elem3__a
+      font:
+        size: 12px
+    &__elem3
+      justify-content: flex-end
+      margin-bottom: 12px
+      margin-top: 5px
+
+  .header-logo
+    .row
+     display: flex
+     justify-content: center
+    &__h1
+     margin-bottom: 34px
+     font:
+      size: 30px
+    &__h2
+     margin-bottom: 77px
+     font:
+      size: 20px
+    &__p_text
+     margin-top: 12px
+     margin-bottom: 25px
+     font:
+      size: 15px
+    &__info
+      margin-bottom: 25px
+      font:
+       size: 15px
+
+@media only screen and (max-width: 768px)
+  .main_block
+    flex-direction: column
