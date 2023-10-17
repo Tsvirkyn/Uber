@@ -10,6 +10,7 @@ $basic_line-height:21px
 $basic_family:Roboto
 $basic_weight_span:400
 $basic_weight_p:300
+
 =btn
   font:
     style: normal
@@ -20,6 +21,7 @@ $basic_weight_p:300
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.12) inset
   text-decoration: none
   flex-shrink: 0
+  padding: 0 7px
   text-transform: uppercase
 %span
   line-height: $basic_line-height
@@ -57,6 +59,8 @@ $basic_weight_p:300
   background: #202020
 
 
+
+
 // Header//
 header
   background: url("../img/uber_bg.png")
@@ -65,9 +69,11 @@ header
   height: 799px
 
 .header-nav
-  padding: 20px 0
+
   background: #212121
+
   .navbar
+    padding: 20px 0
     justify-content: end
   .bg-light
     background: #212121!important
@@ -135,7 +141,6 @@ header
     text-transform: uppercase
     @extend %color-text
 
-
   &__h2
     margin-bottom: 28px
     font:
@@ -175,7 +180,6 @@ header
     font:
       size: 18px
     line-height: 63px
-
 // Main//
 main
  .main_span
@@ -186,6 +190,11 @@ main
  .main_block
    .main_block_article1
      @extend %main_article
+   .main_block_figure
+     background: url("../img/Эллипс.png")
+       position: center
+       repeat: no-repeat
+       size: cover
    .picture
      height: 116px
      width: 116px
@@ -197,6 +206,7 @@ main
    &__p
      color: #202020
      font-size: $basic_font_p
+     padding: 10px
      @extend %main_p
 .main_block_elem1
   .main_block_article2
@@ -205,8 +215,72 @@ main
     width: 113px
     height: 23px
     background: #202020
-
-
+.main_block_elem4
+  flex-direction: column
+  align-items: center
+  background: url("../img/Карточка 1 (1).png")
+    position: center
+    repeat: no-repeat
+    size: cover
+  height: 280px
+.main_block_elem3
+  flex-direction: column
+  align-items: center
+  background: url("../img/Карточка 1 (1).png")
+    position: center
+    repeat: no-repeat
+    size: cover
+  height: 280px
+.main_block_elem5
+  flex-direction: column
+  align-items: center
+  background: url("../img/Карточка 3.png")
+    position: center
+    repeat: no-repeat
+    size: cover
+  height: 280px
+.main_block_elem6
+  flex-direction: column
+  align-items: center
+  background: url("../img/Карточка 4.png")
+    position: center
+    repeat: no-repeat
+    size: cover
+  height: 280px
+.main_block_elem7
+  flex-direction: column
+  align-items: center
+  background: url("../img/Карточка 5.png")
+    position: center
+    repeat: no-repeat
+    size: cover
+  height: 280px
+.main_block_elem8
+  flex-direction: column
+  align-items: center
+  background: url("../img/Карточка 6.png")
+    position: center
+    repeat: no-repeat
+    size: cover
+  height: 280px
+  img
+    height: 29px
+    width: 29px
+h2
+  color: #fff
+  font:
+    family: Roboto
+    size: 24px
+    style: normal
+    weight: 400
+  line-height: 31px /* 129.167% */
+  text-transform: uppercase
+.main_block_figure
+  background: url("../img/Автомобиль (1).png")
+    position: 50% 50%
+    repeat: no-repeat
+    size: cover
+  height: 480px
 
 
 
@@ -231,12 +305,19 @@ main
       font:
         size: 25px
 @media only screen and (max-width: 992px)
+  .header-nav
+    .navbar-nav
+      align-items: flex-end
   .header-info
     &__section
       display: flex
       justify-content: flex-end
     &__block__section
-      display: none!important
+      flex-direction: column
+      justify-content: flex-end
+    .block__elem3
+      justify-content: flex-end
+
     &__elem2__number
       font:
         size: 19px
@@ -272,7 +353,21 @@ main
       margin-bottom: 25px
       font:
        size: 15px
-
 @media only screen and (max-width: 768px)
+  .header-nav
+
+
+
+
+  .header-info
+     &__block__section
+
+
+
+
+
+
   .main_block
     flex-direction: column
+
+
