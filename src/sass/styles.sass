@@ -89,6 +89,9 @@ header
     @extend %color-text
 
 .header-info
+  .header-info__section
+
+    height: 80px
   background: rgba(1, 1, 1, 16.1%)
 
   .block__elem1__span
@@ -97,9 +100,7 @@ header
       size: 13px
       style: normal
       weight: 100
-    line-height: 68px
     @extend %color-text
-
   .block__elem2__span
     font:
       family: Roboto
@@ -183,6 +184,7 @@ header
 // Main//
 main
  .main_span
+   margin: 0
    @extend %main_span
  .main_h2
     margin-bottom: 27px
@@ -190,11 +192,17 @@ main
  .main_block
    .main_block_article1
      @extend %main_article
-   .main_block_figure
+   .main_block_figure_elem1
      background: url("../img/Эллипс.png")
        position: center
        repeat: no-repeat
-       size: cover
+       size: contain
+   .main_block_figure_elem2
+     background: url("../img/Эллипс (0).png")
+       position: center
+       repeat: no-repeat
+       size: contain
+
    .picture
      height: 116px
      width: 116px
@@ -206,63 +214,60 @@ main
    &__p
      color: #202020
      font-size: $basic_font_p
-     padding: 10px
+
      @extend %main_p
-.main_block_elem1
+
+
+.main_uber-mobile-app
+ .main_block_elem1
   .main_block_article2
     margin-top: 16px
     margin-bottom: 33px
     width: 113px
     height: 23px
     background: #202020
-.main_block_elem4
-  flex-direction: column
-  align-items: center
+ .main_block_elem4
   background: url("../img/Карточка 1 (1).png")
     position: center
     repeat: no-repeat
     size: cover
   height: 280px
-.main_block_elem3
-  flex-direction: column
-  align-items: center
+  margin: 19px
+ .main_block_elem3
   background: url("../img/Карточка 1 (1).png")
     position: center
     repeat: no-repeat
     size: cover
   height: 280px
-.main_block_elem5
-  flex-direction: column
-  align-items: center
+  margin: 19px
+ .main_block_elem5
   background: url("../img/Карточка 3.png")
     position: center
     repeat: no-repeat
     size: cover
   height: 280px
-.main_block_elem6
-  flex-direction: column
-  align-items: center
+  margin: 19px
+ .main_block_elem6
   background: url("../img/Карточка 4.png")
     position: center
     repeat: no-repeat
     size: cover
   height: 280px
-.main_block_elem7
-  flex-direction: column
-  align-items: center
+  margin: 19px
+ .main_block_elem7
   background: url("../img/Карточка 5.png")
     position: center
     repeat: no-repeat
     size: cover
   height: 280px
-.main_block_elem8
-  flex-direction: column
-  align-items: center
+  margin: 19px
+ .main_block_elem8
   background: url("../img/Карточка 6.png")
     position: center
     repeat: no-repeat
     size: cover
   height: 280px
+  margin: 19px
   img
     height: 29px
     width: 29px
@@ -275,15 +280,164 @@ h2
     weight: 400
   line-height: 31px /* 129.167% */
   text-transform: uppercase
-.main_block_figure
-  background: url("../img/Автомобиль (1).png")
-    position: 50% 50%
-    repeat: no-repeat
-    size: cover
-  height: 480px
+
+.main_uber-mobile-app
+  background: url("../img/mobile_bg (1).png")
+.main_choice
+  .main_choice_black
+    background: url("../img/Темная подложка (1).png")
+      position: 100%
+      repeat: no-repeat
+      size: cover
+    height: 502px
+
+  .main_choice_cell
+    background: url("../img/Подложка (2).png")
+      position: 100%
+      repeat: no-repeat
+      size: cover
+    height: 397px
+
+  .main_choice__figure
+   background: url("../img/Автомобиль (1).png")
+     position: 50% 50%
+     repeat: no-repeat
+     size: contain
+   height: 480px
+   width: 759px
+   margin: 0
+  .main_choice_elem1
+    z-index: 12
+    top: 54px
+    .main_choice_article
+      margin-bottom: 27px
+      flex-direction: column
+      justify-content: center
+      background: #fff
+      width: 115px
+      height: 25px
+    .main_choice_h4
+      margin: 0
+      color: #070716
+      font:
+       family: Roboto
+       size: 11px
+       style: normal
+       weight: 400
+      line-height: 11px /* 100% */
+      text-transform: uppercase
+    .main_choice_h2
+      margin-bottom: 0
+      color: #FFF
+      font:
+       family: Roboto
+       size: 38px
+       style: normal
+       weight: 700
+      line-height: 48px /* 126.316% */
+      text-transform: uppercase
+    .main_choice_p_elem1
+      margin-top: 0
+      margin-bottom: 50px
+      color: #FFF
+      font:
+       family: Roboto
+       size: 17px
+       style: normal
+       weight: 400
+      line-height: 21px
+
+.main_conditions
+  .main_conditions__ul__elem1
+    background: url("../img/check_blue 4.png") no-repeat 0 50%
+
+  .main_conditions__ul__elem2
+    background: url("../img/check_red 4.png") no-repeat 0 50%
+
+  .main_conditions__h4
+    font-size: 17px
+
+.main_world
+  background: url("../img/world_bg.png")
+  height: 716px
+  .main_world__section
+    height: 716px
+    .main_world__h2
+      text-transform: uppercase
+      font:
+        weight: 700
+        size: 38px
+        style: normal
+        family: Roboto
+    .main_world__p
+      color: #FFF
+      font:
+        family: Roboto
+        size: 17px
+        style: normal
+        weight: 400
+    .main_world__elem1
+      margin-top: 50px
+      margin-bottom: 25px
+      width: 79px
+      height: 27px
+      background: #fff
+      .main_world__h4
+        font-size: 11px
+  .main_world__elem2
+
+    .main_world__h4
+      color: #1FBAD6
+      text-transform: uppercase
+      font:
+        family: Roboto
+        size: 15px
+        style: normal
+        weight:  400
+footer
+  .footer_section__figure
+    margin-top: 21px
+  .footer_section_elem1
+    top: 49px
+    left: 24px
+  .footer_section_elem2
+    top: 49px
+    right: 21px
+    background: url("../img/Ссылки.png")
+    width: 296px
+    height: 27px
 
 
-
+  .footer_section__figure
+    background: url("../img/Разделитель (1).png")
+    width: 300px
+    height: 7px
+  .footer_section__ul
+    list-style-type: none
+    .footer_section__ul__elem1__a
+      color: #070716
+      font:
+        family: Roboto
+        size: 15px
+        style: normal
+        weight: 300
+      text-transform: uppercase
+    .footer_section__ul__elem2__a
+      color: #999
+      font:
+        family: Roboto
+        size: 11px
+        style: normal
+        weight: 300
+      text-transform: uppercase
+    .footer_section__ul__elem3__a
+      color: #1FBAD6
+      font:
+        family: Roboto
+        size: 11px
+        style: normal
+        weight: 400
+      text-transform: uppercase
 
 @media only screen and (max-width: 1200px)
   .header-logo
