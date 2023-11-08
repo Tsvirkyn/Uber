@@ -67,11 +67,8 @@ header
     position: 50% 50%
     size: cover
   height: 799px
-
 .header-nav
-
   background: #212121
-
   .navbar
     padding: 20px 0
     justify-content: end
@@ -90,8 +87,7 @@ header
 
 .header-info
   .header-info__section
-
-    height: 80px
+    height: 87px
   background: rgba(1, 1, 1, 16.1%)
 
   .block__elem1__span
@@ -216,8 +212,6 @@ main
      font-size: $basic_font_p
 
      @extend %main_p
-
-
 .main_uber-mobile-app
  .main_block_elem1
   .main_block_article2
@@ -284,21 +278,21 @@ h2
 .main_uber-mobile-app
   background: url("../img/mobile_bg (1).png")
 .main_choice
-  .main_choice_black
+  &_black
     background: url("../img/Темная подложка (1).png")
       position: 100%
       repeat: no-repeat
       size: cover
     height: 502px
 
-  .main_choice_cell
+  &_cell
     background: url("../img/Подложка (2).png")
       position: 100%
       repeat: no-repeat
       size: cover
     height: 397px
 
-  .main_choice__figure
+  &__figure
    background: url("../img/Автомобиль (1).png")
      position: 50% 50%
      repeat: no-repeat
@@ -306,7 +300,7 @@ h2
    height: 480px
    width: 759px
    margin: 0
-  .main_choice_elem1
+  &_elem1
     z-index: 12
     top: 54px
     .main_choice_article
@@ -346,37 +340,62 @@ h2
        style: normal
        weight: 400
       line-height: 21px
-
 .main_conditions
-  .main_conditions__ul__elem1
-    background: url("../img/check_blue 4.png") no-repeat 0 50%
+  &__section
+    margin: 15px
 
-  .main_conditions__ul__elem2
-    background: url("../img/check_red 4.png") no-repeat 0 50%
+  .main__h3
+    color: #FF5656
+    font:
+      family: Roboto
+      size: 22px
+      style: normal
+      weight: 400
+  &__h3
+    color: #1CA8C3
+    font:
+      family: Roboto
+      size: 22px
+      style: normal
+      weight: 400
+  &__h4
+    color: #1CA8C3
+    font:
+      family: Roboto
+      size: 17px
+      style: normal
+      weight: 300
 
-  .main_conditions__h4
-    font-size: 17px
+  &__ul__elem1
+   img
+     height: 21px
+     width: 20px
+
+  &__ul__elem2
+    img
+      height: 21px
+      width: 20px
 
 .main_world
   background: url("../img/world_bg.png")
   height: 716px
-  .main_world__section
+  &__section
     height: 716px
-    .main_world__h2
+    &__h2
       text-transform: uppercase
       font:
         weight: 700
         size: 38px
         style: normal
         family: Roboto
-    .main_world__p
+    &__p
       color: #FFF
       font:
         family: Roboto
         size: 17px
         style: normal
         weight: 400
-    .main_world__elem1
+    &__elem1
       margin-top: 50px
       margin-bottom: 25px
       width: 79px
@@ -384,9 +403,8 @@ h2
       background: #fff
       .main_world__h4
         font-size: 11px
-  .main_world__elem2
-
-    .main_world__h4
+  &__elem2
+    &__h4
       color: #1FBAD6
       text-transform: uppercase
       font:
@@ -394,25 +412,25 @@ h2
         size: 15px
         style: normal
         weight:  400
-footer
+
+.footer_section
   .footer_section__figure
     margin-top: 21px
-  .footer_section_elem1
+  &_elem1
     top: 49px
     left: 24px
-  .footer_section_elem2
+  &_elem2
     top: 49px
     right: 21px
     background: url("../img/Ссылки.png")
     width: 296px
     height: 27px
 
-
-  .footer_section__figure
+  &__figure
     background: url("../img/Разделитель (1).png")
     width: 300px
     height: 7px
-  .footer_section__ul
+  &__ul
     list-style-type: none
     .footer_section__ul__elem1__a
       color: #070716
@@ -508,13 +526,13 @@ footer
       font:
        size: 15px
 @media only screen and (max-width: 768px)
-  .header-nav
+
 
 
 
 
   .header-info
-     &__block__section
+
 
 
 
