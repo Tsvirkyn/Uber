@@ -1,3 +1,6 @@
+@import 'fonts.sass'
+
+
 // Group selector//
 %color-text
   color: #fff
@@ -7,12 +10,13 @@ $basic_style: normal
 $basic_font_p: 15px
 $basic_color_span:#1EACC7
 $basic_line-height:21px
-$basic_family:Roboto
+$basic_family: Roboto-R
 $basic_weight_span:400
 $basic_weight_p:300
 
 =btn
   font:
+    family: Roboto-R
     style: normal
     weight: 400
   display: block
@@ -21,7 +25,6 @@ $basic_weight_p:300
   box-shadow: 0px -4px 0px 0px rgba(0, 0, 0, 0.12) inset
   text-decoration: none
   flex-shrink: 0
-  padding: 0 7px
   text-transform: uppercase
 %span
   line-height: $basic_line-height
@@ -58,9 +61,6 @@ $basic_weight_p:300
   height: 23px
   background: #202020
 
-
-
-
 // Header//
 header
   background: url("../img/uber_bg.png")
@@ -77,8 +77,9 @@ header
   .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover
     color: snow
   .navbar-light .navbar-nav .nav-link
+    padding: 0
     font:
-     family: Roboto
+     family: Roboto-R
      size: 15px
      style: normal
      weight: 300
@@ -91,15 +92,16 @@ header
   background: rgba(1, 1, 1, 16.1%)
 
   .block__elem1__span
+    padding: 0
     font:
-      family: Roboto
+      family: Roboto-R
       size: 13px
       style: normal
       weight: 100
     @extend %color-text
   .block__elem2__span
     font:
-      family: Roboto
+      family: Roboto-R
       size: 12px
       style: normal
       weight: 300
@@ -108,7 +110,7 @@ header
 
   .block__elem2__number
     font:
-      family: Roboto
+      family: Roboto-R
       size: 22px
       style: normal
       weight: 400
@@ -130,7 +132,7 @@ header
     margin-top: 53px
     margin-bottom: 25px
     font:
-      family: Roboto
+      family: Roboto-R
       size: 60px
       style: normal
       weight: 900
@@ -141,7 +143,7 @@ header
   &__h2
     margin-bottom: 28px
     font:
-      family: Roboto
+      family: Roboto-R
       size: 36px
       style: normal
       weight: 700
@@ -152,7 +154,7 @@ header
   &__p_text
     margin-bottom: 36px
     font:
-      family: Roboto
+      family: Roboto-R
       size: 18px
       style: normal
       weight: 400
@@ -162,7 +164,7 @@ header
   &__info
     margin-bottom: 100px
     font:
-      family: Roboto
+      family: Roboto-R
       size: 18px
       style: normal
       weight: 400
@@ -201,8 +203,7 @@ main
 
    .picture
      height: 116px
-     width: 116px
-     margin-right: 24px
+
    &__span
      color: $basic_color_span
      font-size: $basic_font
@@ -224,51 +225,45 @@ main
   background: url("../img/Карточка 1 (1).png")
     position: center
     repeat: no-repeat
-    size: cover
   height: 280px
-  margin: 19px
+
  .main_block_elem3
   background: url("../img/Карточка 1 (1).png")
     position: center
     repeat: no-repeat
-    size: cover
   height: 280px
-  margin: 19px
+
  .main_block_elem5
   background: url("../img/Карточка 3.png")
     position: center
     repeat: no-repeat
-    size: cover
   height: 280px
-  margin: 19px
+
  .main_block_elem6
   background: url("../img/Карточка 4.png")
     position: center
     repeat: no-repeat
-    size: cover
   height: 280px
-  margin: 19px
+
  .main_block_elem7
   background: url("../img/Карточка 5.png")
     position: center
     repeat: no-repeat
-    size: cover
   height: 280px
-  margin: 19px
+
  .main_block_elem8
   background: url("../img/Карточка 6.png")
     position: center
     repeat: no-repeat
-    size: cover
   height: 280px
-  margin: 19px
+
   img
     height: 29px
     width: 29px
 h2
   color: #fff
   font:
-    family: Roboto
+    family: Roboto-R
     size: 24px
     style: normal
     weight: 400
@@ -314,7 +309,7 @@ h2
       margin: 0
       color: #070716
       font:
-       family: Roboto
+       family: Roboto-R
        size: 11px
        style: normal
        weight: 400
@@ -335,33 +330,33 @@ h2
       margin-bottom: 50px
       color: #FFF
       font:
-       family: Roboto
+       family: Roboto-R
        size: 17px
        style: normal
        weight: 400
       line-height: 21px
 .main_conditions
   &__section
-    margin: 15px
+
 
   .main__h3
     color: #FF5656
     font:
-      family: Roboto
+      family: Roboto-R
       size: 22px
       style: normal
       weight: 400
   &__h3
     color: #1CA8C3
     font:
-      family: Roboto
+      family: Roboto-R
       size: 22px
       style: normal
       weight: 400
   &__h4
     color: #1CA8C3
     font:
-      family: Roboto
+      family: Roboto-R
       size: 17px
       style: normal
       weight: 300
@@ -387,11 +382,11 @@ h2
         weight: 700
         size: 38px
         style: normal
-        family: Roboto
+        family: Roboto-R
     &__p
       color: #FFF
       font:
-        family: Roboto
+        family: Roboto-R
         size: 17px
         style: normal
         weight: 400
@@ -408,7 +403,7 @@ h2
       color: #1FBAD6
       text-transform: uppercase
       font:
-        family: Roboto
+        family: Roboto-R
         size: 15px
         style: normal
         weight:  400
@@ -435,7 +430,7 @@ h2
     .footer_section__ul__elem1__a
       color: #070716
       font:
-        family: Roboto
+        family: Roboto-R
         size: 15px
         style: normal
         weight: 300
@@ -443,7 +438,7 @@ h2
     .footer_section__ul__elem2__a
       color: #999
       font:
-        family: Roboto
+        family: Roboto-R
         size: 11px
         style: normal
         weight: 300
@@ -451,7 +446,7 @@ h2
     .footer_section__ul__elem3__a
       color: #1FBAD6
       font:
-        family: Roboto
+        family: Roboto-R
         size: 11px
         style: normal
         weight: 400
@@ -526,19 +521,6 @@ h2
       font:
        size: 15px
 @media only screen and (max-width: 768px)
-
-
-
-
-
-  .header-info
-
-
-
-
-
-
-
   .main_block
     flex-direction: column
 
