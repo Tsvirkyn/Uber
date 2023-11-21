@@ -129,20 +129,20 @@ header
     line-height: 46px
 /* 328.571% */
 .header-logo
+  margin-top: 49px
   &__h1
-    margin-top: 53px
-    margin-bottom: 25px
+    margin: 0 0 16px
     font:
       family: Roboto-R
       size: 60px
       style: normal
       weight: 900
-    line-height: 40px
+    line-height: 24px
     text-transform: uppercase
     @extend %color-text
 
   &__h2
-    margin-bottom: 28px
+    margin: 0
     font:
       family: Roboto-R
       size: 36px
@@ -153,7 +153,7 @@ header
     @extend %color-text
 
   &__p_text
-    margin-bottom: 36px
+    margin: 0
     font:
       family: Roboto-R
       size: 18px
@@ -163,7 +163,7 @@ header
     @extend %color-text
 
   &__info
-    margin-bottom: 100px
+    margin: 0
     font:
       family: Roboto-R
       size: 18px
@@ -173,6 +173,9 @@ header
     @extend %color-text
 
   &__a
+
+    top: 601px
+    left: 47%
     +btn
     @extend %color-text
     width: 259px
@@ -214,6 +217,8 @@ main
 
      @extend %main_p
 .main_uber-mobile-app
+ .card
+   border-radius: 0
  .main_uber-mobile-app__article1
    background: #000
    width: 112px
@@ -253,36 +258,35 @@ main
  .main_block_elem4
   background: url("../img/Карточка 1 (1).png")
     position: center
-    size: contain
+    repeat: no-repeat
 
   height: 280px
  .main_block_elem3
   background: url("../img/Карточка 1 (1).png")
-    size: contain
+    repeat: no-repeat
     position: center
 
   height: 280px
  .main_block_elem5
   background: url("../img/Карточка 3.png")
-    size: contain
+    repeat: no-repeat
     position: center
 
   height: 280px
  .main_block_elem6
   background: url("../img/Карточка 4.png")
-    size: contain
+    repeat: no-repeat
     position: center
-
   height: 280px
  .main_block_elem7
   background: url("../img/Карточка 5.png")
-    size: contain
+    repeat: no-repeat
     position: center
 
   height: 280px
  .main_block_elem8
   background: url("../img/Карточка 6.png")
-    size: contain
+    repeat: no-repeat
     position: center
 
   height: 280px
@@ -315,15 +319,14 @@ h2
       repeat: no-repeat
       size: cover
     height: 397px
+  &__img
+    height: 480px
   &__figure
-   bottom: 185px
-   background: url("../img/Автомобиль (1).png")
-     position: 50% 50%
-     repeat: no-repeat
-     size: contain
-   height: 480px
-   width: 759px
-   margin: 0
+   z-index: 12
+   top: 50%
+   left: 50%
+   margin-left: -300px
+   margin-top: -240px
   &_elem1
     z-index: 12
   .main_choice_article
@@ -365,8 +368,6 @@ h2
        weight: 400
       line-height: 21px
 .main_conditions
-  .card
-    border: none
   .main__h2
     color: #222
     line-height: 48px /* 126.316% */
@@ -416,15 +417,28 @@ h2
       weight: 400
 
   &__ul__elem1
-   img
+    color: #222
+    font:
+     family: Roboto
+     size: 17px
+     style: normal
+     weight: 300
+    line-height: 24px
+    img
      height: 21px
      width: 20px
 
   &__ul__elem2
+    color: #222
+    font:
+      family: Roboto
+      size: 17px
+      style: normal
+      weight: 300
+    line-height: 24px
     img
       height: 21px
       width: 20px
-
 .main_world
   background: url("../img/world_bg.png")
   height: 716px
@@ -471,25 +485,21 @@ h2
         weight:  400
 
 .footer_section
+  .footer__section
+    top: 49px
+    right: 24px
   .footer_section__figure
     margin-top: 21px
   &_elem1
     top: 49px
     left: 24px
 
-  &_elem2
-    background: url("../img/Ссылки.png")
-     repeat: no-repeat
-    width: 296px
-    height: 27px
-  .footer__section
-
-
   &__figure
     background: url("../img/Разделитель (1).png")
     width: 300px
     height: 7px
   &__ul
+    width: 100%
     list-style-type: none
     .footer_section__ul__elem1__a
       color: #070716
@@ -518,28 +528,34 @@ h2
 
 @media only screen and (max-width: 1200px)
   .header-logo
+    &__a
+     left: 40%
     &__h1
-      margin-bottom: 24px
       font:
-        size: 44px
+        size: 32px
     &__h2
-      margin-bottom: 17px
+
       font:
-        size: 28px
+        size: 25px
     &__p_text
-      margin-top: 12px
-      margin-bottom: 25px
+      line-height: normal
       font:
-        size: 25px
+        size: 22px
     &__info
-      margin-bottom: 25px
+      line-height: normal
       font:
-        size: 25px
+        size: 22px
+
+
 @media only screen and (max-width: 992px)
   .header-nav
+    .navbar-light .navbar-nav .nav-link
+      padding: 12px
     .navbar-nav
       align-items: flex-end
   .header-info
+    .header-info__section_elem
+      flex-direction: column
     &__section
       display: flex
       justify-content: flex-end
@@ -563,41 +579,64 @@ h2
       margin-top: 5px
 
   .header-logo
+    &__a
+     right: 28%
     .row
      display: flex
      justify-content: center
     &__h1
-     margin-bottom: 34px
+     line-height: normal
      font:
       size: 30px
     &__h2
-     margin-bottom: 77px
+
      font:
       size: 20px
     &__p_text
-     margin-top: 12px
-     margin-bottom: 25px
+     line-height: normal
      font:
       size: 15px
     &__info
-      margin-bottom: 25px
+
       font:
        size: 15px
   .main_choice
+    &__img
+     height: 370px
     .main_choice__figure
-      width: 478px
-      bottom: 365px
+     margin-left: -3.5em
+     margin-top: -2.5em
+     left: 20%
     .main_choice_p_elem2
       bottom: 425px
       color: #fff
 
-
 @media only screen and (max-width: 768px)
+  .header-logo
+    &__a
+      left: 28%
   .main_block
     flex-direction: column
-
+  .main_choice
+    &__img
+      height: 230px
+    .main_choice__figure
+      margin-left: -3.5em
+      margin-top: -2.5em
+      left: 14%
   .footer_section_elem1
-    top: 90px
+    display: block
+    top: 0
+    right: 0
+  .footer__section
+    background-position: center
+    display: block
+    top: 0
+    right: 0
 
 
+@media only screen and (max-width: 540px)
+  .header-logo
+    &__a
+      left: 20%
 
