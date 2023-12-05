@@ -70,13 +70,18 @@ header
   height: 799px
 .header-nav
   background: #212121
+  .navbar-dark .navbar-nav .nav-link
+    color: white
+  .bg-dark
+    background: #212121!important
   .navbar
     padding: 20px 0
     justify-content: end
   .bg-light
     background: #212121!important
-  .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover
+  .navbar-light .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover
     color: snow
+
   .navbar-light .navbar-nav .nav-link
     padding: 0
     font:
@@ -173,10 +178,8 @@ header
     @extend %color-text
 
   &__a
-
-    top: 601px
-    left: 47%
     +btn
+    top: 201px
     @extend %color-text
     width: 259px
     height: 63px
@@ -258,39 +261,27 @@ main
  .main_block_elem4
   background: url("../img/Карточка 1 (1).png")
     position: center
-    repeat: no-repeat
-
   height: 280px
  .main_block_elem3
   background: url("../img/Карточка 1 (1).png")
-    repeat: no-repeat
     position: center
-
   height: 280px
  .main_block_elem5
   background: url("../img/Карточка 3.png")
-    repeat: no-repeat
     position: center
-
   height: 280px
  .main_block_elem6
   background: url("../img/Карточка 4.png")
-    repeat: no-repeat
     position: center
   height: 280px
  .main_block_elem7
   background: url("../img/Карточка 5.png")
-    repeat: no-repeat
     position: center
-
   height: 280px
  .main_block_elem8
   background: url("../img/Карточка 6.png")
-    repeat: no-repeat
     position: center
-
   height: 280px
-
   img
     height: 29px
     width: 29px
@@ -442,8 +433,7 @@ h2
 .main_world
   background: url("../img/world_bg.png")
   height: 716px
-  &__section
-    height: 716px
+
   .main_world_article1
     background: #fff
     width: 75px
@@ -476,6 +466,7 @@ h2
     text-transform: uppercase
   .main_world__elem2
     .main_world__h4
+      margin: 0
       color: #1FBAD6
       text-transform: uppercase
       font:
@@ -485,15 +476,16 @@ h2
         weight:  400
 
 .footer_section
+  figure
+    margin: 17px
   .footer__section
+    position: absolute
     top: 49px
     right: 24px
-  .footer_section__figure
-    margin-top: 21px
   &_elem1
+    position: absolute
     top: 49px
     left: 24px
-
   &__figure
     background: url("../img/Разделитель (1).png")
     width: 300px
@@ -549,11 +541,21 @@ h2
 
 @media only screen and (max-width: 992px)
   .header-nav
+
     .navbar-light .navbar-nav .nav-link
       padding: 12px
     .navbar-nav
       align-items: flex-end
   .header-info
+    .header-info__section
+      height: 68px
+    .block__elem2__number
+      font-size: 12px
+    .block__elem3__a
+      line-height: 22px
+      height: 22px
+      font:
+        size: 10px
     .header-info__section_elem
       flex-direction: column
     &__section
@@ -571,8 +573,11 @@ h2
       font:
         size: 11px
     &__elem3__a
+      line-height: 22px
+      width: 104.876px
+      height: 22px
       font:
-        size: 12px
+        size: 10px
     &__elem3
       justify-content: flex-end
       margin-bottom: 12px
@@ -580,6 +585,10 @@ h2
 
   .header-logo
     &__a
+     width: 200px
+     height: 50px
+     font-size: 16px
+     line-height: 50px
      right: 28%
     .row
      display: flex
@@ -588,55 +597,105 @@ h2
      line-height: normal
      font:
       size: 30px
+      weight: 900
     &__h2
-
+     line-height: normal
      font:
       size: 20px
+      weight: 700
     &__p_text
      line-height: normal
      font:
       size: 15px
     &__info
-
       font:
        size: 15px
+
   .main_choice
     &__img
      height: 370px
     .main_choice__figure
-     margin-left: -3.5em
-     margin-top: -2.5em
+     margin-left: -1.5em
+     margin-top: -7.5em
      left: 20%
     .main_choice_p_elem2
       bottom: 425px
       color: #fff
+  .main_reasons-to-work
+    .main_h2
+     font-size: 16px
+     line-height: 16px
+main .main_reasons-to-work .main_reasons-to-work__span
+      font-size: 16px
+main .main_reasons-to-work .picture
+      height: 100px
+
+.main_uber-mobile-app__p
+   font-size: 14px
+.main_block_elem3_h2
+  font-size: 18px
+.main_h2
+  font-size: 16px
+  line-height: 16px
+
+
+.main_choice_black
+  height: 393px
+
+.footer_section
+ .footer__section
+  top: 120px
+  right: 30px
 
 @media only screen and (max-width: 768px)
   .header-logo
     &__a
       left: 28%
+
+  .main_conditions
+   .main_h2
+     font-size: 16px
+   .main_conditions__h4
+     font-size: 14px
+   .main_conditions__h3
+     font-size: 16px
+   .main_conditions__section__h3
+     font-size: 16px
+   .main_conditions__ul__elem1
+     font-size: 14px
+  .main_world
+    height: 360px
+  main .main_world__section
+    justify-content: space-around!important
+    height: 360px
+  .main_world__h2
+    font-size: 16px
+  .main_world .main_world__p
+    font-size: 14px
   .main_block
     flex-direction: column
   .main_choice
     &__img
       height: 230px
     .main_choice__figure
+
       margin-left: -3.5em
       margin-top: -2.5em
       left: 14%
   .footer_section_elem1
     display: block
-    top: 0
-    right: 0
+    position: absolute
+    top: 163px
+    left: 145px
   .footer__section
-    background-position: center
+    position: absolute
     display: block
-    top: 0
-    right: 0
-
-
+    top: 220px
+  .footer_section__ul .footer_section__ul__elem2__a
+    font-size: 14px
+  .footer_section__ul .footer_section__ul__elem1__a
+    font-size: 14px
 @media only screen and (max-width: 540px)
   .header-logo
     &__a
       left: 20%
-
