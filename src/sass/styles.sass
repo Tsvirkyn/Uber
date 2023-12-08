@@ -62,6 +62,7 @@ $basic_weight_p:300
   height: 23px
   background: #202020
 
+
 // Header//
 header
   background: url("../img/uber_bg.png")
@@ -70,6 +71,13 @@ header
   height: 799px
 .header-nav
   background: #212121
+  .navbar-nav
+    .nav-item
+      display: flex
+      align-items: center
+      padding-right: 30px
+      height: 31px
+      border-right: 2px dashed #000
   .navbar-dark .navbar-nav .nav-link
     color: white
   .bg-dark
@@ -81,8 +89,7 @@ header
     background: #212121!important
   .navbar-light .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover
     color: snow
-
-  .navbar-light .navbar-nav .nav-link
+  .navbar-dark .navbar-nav .nav-link
     padding: 0
     font:
      family: Roboto-R
@@ -135,6 +142,9 @@ header
 /* 328.571% */
 .header-logo
   margin-top: 49px
+  .header-logo_section__article
+    top: 200px
+    left: 514px
   &__h1
     margin: 0 0 16px
     font:
@@ -142,7 +152,6 @@ header
       size: 60px
       style: normal
       weight: 900
-    line-height: 24px
     text-transform: uppercase
     @extend %color-text
 
@@ -179,7 +188,6 @@ header
 
   &__a
     +btn
-    top: 201px
     @extend %color-text
     width: 259px
     height: 63px
@@ -247,8 +255,11 @@ main
     style: normal
     weight: 400
    line-height: 21px /* 123.529% */
+
  .main_block__elem2
    .main_block__elem2__section
+     .main_block__elem2__section__article
+       margin-right: 140px
      .main_block_elem3_h2
        color: #FFF
        font:
@@ -474,7 +485,8 @@ h2
         size: 15px
         style: normal
         weight:  400
-
+.main_world__section
+  height: 700px
 .footer_section
   figure
     margin: 17px
@@ -517,11 +529,20 @@ h2
         style: normal
         weight: 400
       text-transform: uppercase
-
+@media only screen and (max-width: 1024px)
+  .header-logo
+    .header-logo_section__article
+      left: 410px
+  .main_uber-mobile-app
+   .main_block__elem2
+    .main_block__elem2__section
+     .main_block__elem2__section__article
+       margin-right: 54px
+       margin-left: 0
+     .main_block_elem5
+       margin-right: 54px
 @media only screen and (max-width: 1200px)
   .header-logo
-    &__a
-     left: 40%
     &__h1
       font:
         size: 32px
@@ -537,11 +558,16 @@ h2
       line-height: normal
       font:
         size: 22px
-
+  .header-nav
+   .navbar-nav
+    .nav-item
+      padding-right: 6px
 
 @media only screen and (max-width: 992px)
   .header-nav
-
+    .navbar-nav
+     .nav-item
+       border: none
     .navbar-light .navbar-nav .nav-link
       padding: 12px
     .navbar-nav
@@ -584,12 +610,14 @@ h2
       margin-top: 5px
 
   .header-logo
+    .header-logo_section__article
+
+      left: 255px
     &__a
      width: 200px
      height: 50px
      font-size: 16px
      line-height: 50px
-     right: 28%
     .row
      display: flex
      justify-content: center
@@ -615,9 +643,9 @@ h2
     &__img
      height: 370px
     .main_choice__figure
-     margin-left: -1.5em
-     margin-top: -7.5em
-     left: 20%
+     margin-left: -296px
+     margin-top: -139px
+     left: 50%
     .main_choice_p_elem2
       bottom: 425px
       color: #fff
@@ -637,20 +665,16 @@ main .main_reasons-to-work .picture
 .main_h2
   font-size: 16px
   line-height: 16px
-
-
+.main_world__elem2
+  justify-content: center
 .main_choice_black
   height: 393px
-
-.footer_section
- .footer__section
-  top: 120px
-  right: 30px
-
+.footer_section__ul
+  justify-content: space-between
 @media only screen and (max-width: 768px)
   .header-logo
-    &__a
-      left: 28%
+    .header-logo_section__article
+      left: 182px
 
   .main_conditions
    .main_h2
@@ -678,24 +702,32 @@ main .main_reasons-to-work .picture
     &__img
       height: 230px
     .main_choice__figure
+      margin-left: -185px
+      margin-top: -88px
+      left: 50%
 
-      margin-left: -3.5em
-      margin-top: -2.5em
-      left: 14%
+
   .footer_section_elem1
     display: block
-    position: absolute
-    top: 163px
-    left: 145px
-  .footer__section
-    position: absolute
+    position: static
+    width: 30%
+    margin: auto
+    margin-bottom: 12px
+  .footer_section .footer__section
+    position: static
     display: block
-    top: 220px
+    margin: auto
+    width: 50%
+
+  .footer_section__ul
+    display: flex
+    justify-content: space-around!important
+
   .footer_section__ul .footer_section__ul__elem2__a
-    font-size: 14px
+    font-size: 11px
   .footer_section__ul .footer_section__ul__elem1__a
-    font-size: 14px
+    font-size: 11px
 @media only screen and (max-width: 540px)
   .header-logo
-    &__a
-      left: 20%
+    .header-logo_section__article
+      left: 104px
