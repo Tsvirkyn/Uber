@@ -72,12 +72,13 @@ header
 .header-nav
   background: #212121
   .navbar-nav
-    .nav-item
+    .navbar-nav__nav-item::after
+      content: url("../img/Разделитель (1).png")
       display: flex
-      align-items: center
-      padding-right: 30px
-      height: 31px
-      border-right: 2px dashed #000
+      margin-left: 30px
+      justify-content: flex-end
+
+
   .navbar-dark .navbar-nav .nav-link
     color: white
   .bg-dark
@@ -94,16 +95,12 @@ header
     font:
      family: Roboto-R
      size: 15px
-     style: normal
-     weight: 300
-    line-height: 15px
     @extend %color-text
 
 .header-info
   .header-info__section
     height: 87px
   background: rgba(1, 1, 1, 16.1%)
-
   .block__elem1__span
     padding: 0
     font:
@@ -127,7 +124,6 @@ header
       size: 22px
       style: normal
       weight: 400
-
     /* 309.091% */
     text-transform: uppercase
     @extend %color-text
@@ -143,8 +139,11 @@ header
 .header-logo
   margin-top: 49px
   .header-logo_section__article
+    width: 259px
+    padding: 0
+    left: 50%
+    margin-left: -130px
     top: 200px
-    left: 514px
   &__h1
     margin: 0 0 16px
     font:
@@ -189,14 +188,12 @@ header
   &__a
     +btn
     @extend %color-text
-    width: 259px
     height: 63px
     font:
       size: 18px
     line-height: 63px
 // Main//
 main
-
  .main_span
    margin: 0
    @extend %main_span
@@ -204,6 +201,8 @@ main
     margin-bottom: 27px
     @extend %mobil
  .main_reasons-to-work
+   .main_reasons-to-work__article
+     height: 240px
    .main_block_article1
      @extend %main_article
    .main_block_figure_elem1
@@ -327,7 +326,7 @@ h2
    z-index: 12
    top: 50%
    left: 50%
-   margin-left: -300px
+   margin-left: -380px
    margin-top: -240px
   &_elem1
     z-index: 12
@@ -418,7 +417,9 @@ h2
       style: normal
       weight: 400
 
-  &__ul__elem1
+  &__ul__elem1::before
+    padding: 5px
+    content: url("../img/check_blue 4.png")
     color: #222
     font:
      family: Roboto
@@ -426,11 +427,9 @@ h2
      style: normal
      weight: 300
     line-height: 24px
-    img
-     height: 21px
-     width: 20px
-
-  &__ul__elem2
+  &__ul__elem2::before
+    padding: 5px
+    content: url("../img/check_red 4.png")
     color: #222
     font:
       family: Roboto
@@ -438,9 +437,7 @@ h2
       style: normal
       weight: 300
     line-height: 24px
-    img
-      height: 21px
-      width: 20px
+
 .main_world
   background: url("../img/world_bg.png")
   height: 716px
@@ -499,7 +496,7 @@ h2
     top: 49px
     left: 24px
   &__figure
-    background: url("../img/Разделитель (1).png")
+    background: url("../img/Разделитель (2).png")
     width: 300px
     height: 7px
   &__ul
@@ -532,7 +529,8 @@ h2
 @media only screen and (max-width: 1024px)
   .header-logo
     .header-logo_section__article
-      left: 410px
+      left: 50%
+      margin-left: -114px
   .main_uber-mobile-app
    .main_block__elem2
     .main_block__elem2__section
@@ -561,8 +559,12 @@ h2
   .header-nav
    .navbar-nav
     .nav-item
-      padding-right: 6px
-
+      padding-right: 10px
+  .main_uber-mobile-app
+   .main_block__elem2
+    .main_block__elem2__section
+     .main_block__elem2__section__article
+      margin-right: 88px
 @media only screen and (max-width: 992px)
   .header-nav
     .navbar-nav
@@ -611,8 +613,9 @@ h2
 
   .header-logo
     .header-logo_section__article
-
-      left: 255px
+      left: 50%
+      margin-left: -100px
+      width: 203px
     &__a
      width: 200px
      height: 50px
@@ -657,7 +660,11 @@ main .main_reasons-to-work .main_reasons-to-work__span
       font-size: 16px
 main .main_reasons-to-work .picture
       height: 100px
-
+.main_uber-mobile-app
+ .main_block__elem2
+  .main_block__elem2__section
+   .main_block__elem2__section__article
+     margin-right: 54px
 .main_uber-mobile-app__p
    font-size: 14px
 .main_block_elem3_h2
@@ -674,8 +681,8 @@ main .main_reasons-to-work .picture
 @media only screen and (max-width: 768px)
   .header-logo
     .header-logo_section__article
-      left: 182px
-
+      left: 50%
+      margin-left: -100px
   .main_conditions
    .main_h2
      font-size: 16px
@@ -705,19 +712,19 @@ main .main_reasons-to-work .picture
       margin-left: -185px
       margin-top: -88px
       left: 50%
-
-
   .footer_section_elem1
-    display: block
+    display: flex
+    justify-content: space-around
     position: static
     width: 30%
     margin: auto
     margin-bottom: 12px
   .footer_section .footer__section
     position: static
-    display: block
+    justify-content: space-around
+    display: flex
     margin: auto
-    width: 50%
+
 
   .footer_section__ul
     display: flex
@@ -730,4 +737,5 @@ main .main_reasons-to-work .picture
 @media only screen and (max-width: 540px)
   .header-logo
     .header-logo_section__article
-      left: 104px
+      margin-left: -100px
+      left: 50%
